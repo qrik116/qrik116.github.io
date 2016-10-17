@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="ru">
+    <head>
+        <title>Проект про машины</title>
+        <meta charset="utf-8">
+        <link rel="stylesheet" href="css/style.css"/>
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.0/jquery.min.js"></script>
+        <script src="js/script.js" type="text/jscript"></script>
+    </head>
+    <body>
+        <div id="wrapper">
+            <header><img src="images/Header.png" title = "header" alt = "Шапка"/></header>
+            <div id="main">
+                <nav>
+                    <ul>
+                        <li><a href="index.html" title = "На главную"><img src="images/Logo.jpg" title="Главная" alt="лого"/></a></li>
+                        <li><a href="Ghibli.html" title = "Ghibli"><p>Ghibli</p></a></li>
+                        <li><a href="Quattroporte.html" title = "Quattroporte"><p>Quattroporte</p></a></li>
+                        <li><a href="GranTuristo.html" title = "GranTuristo"><p>GranTuristo</p></a></li>
+                    </ul>
+                    <div id="map"><img src="images/Map.jpg" alt="map"/></div>
+                </nav>
+                <div id="content">
+                <table>
+                    <tr>
+                        <th id="main_title" colspan="3"><h1>Главная</h1></th>
+                    </tr>
+                    <tr>
+                        <td class="small_card">
+                            <figure>
+                                <img src="images/Ghibli.jpg" alt="Ghibli"/>
+                                <figcaption><small>Бизнес класс</small></figcaption>
+                            </figure>
+                            <article>
+                                <h2>Ghibli</h2> 
+                                <p>Maserati Ghibli III - седан биснес-класса итальянской компании Maserati, который поступил в продажу во второй половине 2013.</p>
+                                <a href="Ghibli.html" title = "Ghibli">Перейти</a>
+                            </article>
+                        </td>
+                        <td class="small_card">
+                            <figure>
+                                <img src="images/Quatro.jpg" alt="Quatro"/>
+                                <figcaption><small>Представительский класс</small></figcaption>
+                            </figure>
+                            <article>
+                                <h2>Quatro</h2> 
+                                <p>Maserati Quattroporte - спортивный полноразмерный седан класса люкс, который изготовляються итальянской компанией Maserati с 1963.</p>
+                                <a href="Quattroporte.html" title = "Quattroporte">Перейти</a>
+                            </article>
+                        </td>
+                        <td class="small_card">
+                            <figure>
+                                <img src="images/Grand.jpg" alt="Grand"/>
+                                <figcaption><small>Купе</small></figcaption>
+                            </figure>
+                            <article>
+                                <h2>Grand</h2>
+                                <p>Maserati GranTurismo - автомобиль класса Гран Туризмо от итальянского производителя Masserati. Общественности был предоставлен в марте 2007 года на Женевском автосалоне.</p>
+                                <a href="GranTuristo.html" title = "GranTuristo">Перейти</a>
+                            </article>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td class="big_card" colspan="3">
+                            <img src="images/Form.png" alt="Форма"/>
+                            <form action="/home/order" method="post">
+                                <fieldset>
+                                    <legend>Оформление заказа</legend>
+                                    <input type="text" name="Name" placeholder="Введите ваше имя" required /><br/>
+                                    <input type="tel" name="tel" placeholder="8-(888)-444-33-22" required pattern="8-[0-9]{3}-[0-9]{3}-[0-9]{4}" /><br/>
+                                    <select name="Car">
+                                        <option value="Ghibli">Ghibli</option>
+                                        <option value="Quattroporte">Quattroporte</option>
+                                        <option value="GranTuristo">GranTuristo</option>
+                                    </select><br/>
+                                    <input type="submit" name="sub" value="Заказать"/>
+                                </fieldset>
+                            </form>
+                        </td>
+                    </tr>
+                </table>
+                </div>
+                <div style="clear: both;"></div>
+            </div>
+            <footer>
+                <h2>Copyright</h2>
+            </footer>
+        </div>
+    </body>
+</html>

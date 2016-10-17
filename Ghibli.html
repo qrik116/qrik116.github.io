@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Проект про машины</title>
+        <meta charset="utf-8">
+        <link rel="stylesheet" href="css/style.css"/>
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.0/jquery.min.js"></script>
+        <script src="js/script.js" type="text/jscript"></script>
+    </head>
+    <body>
+        <div id="wrapper">
+            <header><img src="images/Header.png" title = "header" alt = "Шапка"/></header>
+            <div id="main">
+                <nav>
+                    <ul>
+                        <li><a href="index.html" title = "На главную"><img src="images/Logo.jpg" title="Главная" alt="лого"/></a></li>
+                        <li><a href="Ghibli.html" title = "Ghibli"><p>Ghibli</p></a></li>
+                        <li><a href="Quattroporte.html" title = "Quattroporte"><p>Quattroporte</p></a></li>
+                        <li><a href="GranTuristo.html" title = "GranTuristo"><p>GranTuristo</p></a></li>
+                    </ul>
+                    <div id="map"><img src="images/Map.jpg" alt="map"/></div>
+                </nav>
+                <div id="content">
+                <table>
+                    <tr>
+                        <th id="main_title" colspan="3"><h1>Ghibli</h1></th>
+                    </tr>
+                    <tr class="big_pic">
+                        <td colspan="3"><img id="preview" src="images/Ghibli-1.jpeg" alt="Превью"/></td>
+                    </tr>
+                    <tr class="small_pic">
+                        <td><img onclick="changeImage(this.src)" src="images/Ghibli-1.jpeg" alt="Перед"/></td>
+                        <td><img onclick="changeImage(this.src)" src="images/Ghibli-2.jpeg" alt="Бок"/></td>
+                        <td><img onclick="changeImage(this.src)" src="images/Ghibli-3.jpeg" alt="Внутри"/></td>
+                    </tr>
+                </table>
+                </div>
+                <div style="clear: both;"></div>
+            </div>
+            <footer><h2>Copyright</h2></footer>
+        </div>
+    </body>
+</html>
