@@ -36,14 +36,15 @@ $(document).ready(function(){
     
     var sub_marginleft = $('input[type=submit]').css('margin-left');
     var sub_width = $('input[type=submit]').css('width');
-    var legend_width = $('legend').css('width');
+    var full_width = $('select').css('width')
+    console.log(full_width);
     
     $('#img').fadeTo(1000, 0.3, function () {
         $('html, body').animate({scrollTop: $('nav').offset().top}, 1000);
     });
     
     $('input[type=submit]').mouseover(function(){
-        $(this).animate({marginLeft: 0, width: legend_width}, 1000);
+        $(this).animate({marginLeft: 0, width: full_width}, 1000);
     });
     
     $('input[type=submit]').mouseleave(function(){
