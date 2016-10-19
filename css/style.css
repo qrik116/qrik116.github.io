@@ -29,7 +29,7 @@ nav ul{
     height: 100%;
 }
 
-nav ul, .main_title, .small_card, .big_card, footer{
+nav ul, .main_title, .small_card, .big_card, footer, .form{
     background-color: white;
 }
 
@@ -153,17 +153,17 @@ article{
 
 .big_card{
     margin: 20px 0 0 0;
-    padding: 0;
 }
 
 /*Форма*/
 .big_card img{
-    width: 300px;
+    max-width: 100%;
+    
 }
 
-form{
-    width: calc(100% - 300px);
-    float: right;
+.form{
+    margin: 20px 0 0 0;
+    padding: 0 0 8px 7%;
 }
 
 fieldset{
