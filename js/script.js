@@ -33,7 +33,10 @@ $(document).ready(function(){
     /*if (get_name_browser()=='Firefox'){
         $('table p').css('height', 121)//11
     };*/
-
+    
+    $('.icon_menu').click(function(){
+        $(this).next().slideToggle();
+    });
     var sub_marginleft = $('input[type=submit]').css('margin-left');
     var sub_width = $('input[type=submit]').css('width');
     var select_width = $('select').css('width');
