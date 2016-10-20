@@ -1,17 +1,17 @@
 function changeImage(selected_url) {
-    $('#preview').fadeTo(1000, 0, function(){
+    $('#preview').fadeTo(500, 0, function(){
         $('#preview').attr('src', selected_url);
-        $('#preview').fadeTo(1000, 1);
+        $('#preview').fadeTo(500, 1);
     });
 }
 
-function animate_bigcard() {
+/*function animate_bigcard() {
     setTimeout(function(){
         $('.big_card img').animate({borderTopLeftRadius: 100, borderTopRightRadius: 100, borderBottomRightRadius: 100, borderBottomLeftRadius: 100}, 1000, function(){
             $('.big_card img').animate({borderTopLeftRadius: 0, borderTopRightRadius: 0, borderBottomRightRadius: 0, borderBottomLeftRadius: 0}, 1000);
         });
     }, 1000);
-}
+}*/
 
 function get_name_browser(){
     // получаем данные userAgent
@@ -33,18 +33,18 @@ $(document).ready(function(){
     /*if (get_name_browser()=='Firefox'){
         $('table p').css('height', 121)//11
     };*/
-    
+
     var sub_marginleft = $('input[type=submit]').css('margin-left');
     var sub_width = $('input[type=submit]').css('width');
-    var full_width = $('select').css('width')
-    console.log(full_width);
+    var select_width = $('select').css('width');
+    
     
     $('#img').fadeTo(1000, 0.3, function () {
         $('html, body').animate({scrollTop: $('nav').offset().top}, 1000);
     });
     
     $('input[type=submit]').mouseover(function(){
-        $(this).animate({marginLeft: 0, width: full_width}, 1000);
+        $(this).animate({marginLeft: 0, width: select_width}, 1000);
     });
     
     $('input[type=submit]').mouseleave(function(){

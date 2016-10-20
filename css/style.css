@@ -1,7 +1,35 @@
+*::-webkit-input-placeholder {
+	color: #666;
+	opacity: 1;
+}
+*:-moz-placeholder {
+	color: #666;
+	opacity: 1;
+}
+*::-moz-placeholder {
+	color: #666;
+	opacity: 1;
+}
+*:-ms-input-placeholder {
+	color: #666;
+	opacity: 1;
+}
+
+body input:focus:required:invalid,
+body textarea:focus:required:invalid {
+	
+}
+body input:required:valid,
+body textarea:required:valid {
+	
+}
+
 /*Сетка*/
 
 body{
     background-color: #ccc;
+    font-family: "RobotoRegular", sans-serif;
+	font-size: 16px;
 }
 
 #wrapper{
@@ -14,12 +42,6 @@ body{
     width: 100%;
 }
 
-nav{
-    height: auto;
-}
-nav ul{
-    height: 520px;
-}
 #map{
     margin: 20px 0 20px 0;
     height: 225px;
@@ -35,9 +57,9 @@ nav ul, .main_title, .small_card, .big_card, footer, .form{
 
 /*Навигация*/
 
-nav ul{
+nav ul {
     margin: 0;
-    padding: 0;
+    padding: 0 0 1px 0;
 }
 
 nav ul li{
@@ -45,12 +67,12 @@ nav ul li{
 }
 
 nav ul li:nth-child(n+2){
-    margin-top: 20px;
+    margin: 20px 0;
 }
 
-nav ul li:nth-child(n+2) a p{
-    padding: 10%;
-    padding-left: 18%;
+nav ul li:nth-child(n+2) a p {
+    padding: 20px 0 20px 17%;
+    margin: 0;
 }
 
 nav ul li img{
@@ -157,7 +179,7 @@ article{
 
 /*Форма*/
 .big_card img{
-    max-width: 100%;
+    width: 100%;
     
 }
 
@@ -200,8 +222,8 @@ input[type=submit]
     background-image: url("../images/Button-2.jpg");
     background-repeat: no-repeat;
     background-position: 11px;
-    width: 110px;
-    margin-left: calc(100% - 110px);
+    width: 120px;
+    margin-left: calc(100% - 120px);
     margin-bottom: 0;
     cursor: pointer;
 }
@@ -218,10 +240,6 @@ input[type=submit]
 
 .big_pic img, .small_pic img{
     width: 100%;
-}
-
-.small_pic img{
-    cursor: pointer;
 }
 
 
