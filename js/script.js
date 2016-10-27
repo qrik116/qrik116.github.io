@@ -37,21 +37,17 @@ $(document).ready(function(){
     $('.icon_menu').click(function(){
         $(this).next().slideToggle();
     });
-    var sub_marginleft = $('input[type=submit]').css('margin-left');
+    
     var sub_width = $('input[type=submit]').css('width');
-    var select_width = $('select').css('width');
-    
-    
-    $('#img').fadeTo(1000, 0.3, function () {
-        $('html, body').animate({scrollTop: $('nav').offset().top}, 1000);
-    });
-    
     $('input[type=submit]').mouseover(function(){
-        $(this).animate({marginLeft: 0, width: select_width}, 1000);
+        $(this).css('width', '100%');
     });
     
     $('input[type=submit]').mouseleave(function(){
-        $(this).stop(true);
-        $(this).animate({marginLeft: sub_marginleft, width: sub_width}, 1000);
+        $(this).css('width', sub_width);
+    });
+    
+    $('#img').fadeTo(1000, 0.3, function () {
+        $('html, body').animate({scrollTop: $('nav').offset().top}, 1000);
     });
 });
