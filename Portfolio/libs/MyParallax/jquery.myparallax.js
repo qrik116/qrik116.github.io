@@ -10,7 +10,6 @@
                     'position': 'relative',
                     'overflow': 'hidden',
                     'width': '100%',
-                    'margin': '0 0 50px 0'
                 })
                 .append("<img src='" + ths.data('image-parallax') + "' alt='alt' style='position: absolute;width: 100%;'>");
 
