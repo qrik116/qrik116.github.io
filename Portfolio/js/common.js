@@ -1,8 +1,8 @@
 $('.img').css('display', 'none');
 $('.cont').css('display', 'none');
+var right = true;
 
 $(document).ready(function () {
-
     //MyParallax
     $('.parallax').MyParallax();
     //Таймер обратного отсчета
@@ -104,23 +104,24 @@ $(document).ready(function () {
     $('.fullscrin').css('padding-bottom', ($(window).height() - ($('.nav').height() + Number($('.nav').css('padding-top').replace("px", "")) * 2))/2);
     $('.section').css('padding-top', ($(window).height() - $('.text_centr').height()) / 2 - 16.08);
     $('.section').css('padding-bottom', ($(window).height() - $('.text_centr').height()) / 2 -16.08);
-    
+    _opacity();
 });
-    
+
 $(window).scroll(function(){
     if (scrollY > 100){
         $('.nav').css({ 
             'padding': '0',
-            'height': '50px'  
+            'height': '50px',
         });
     }
-    if (scrollY <= 100){
+    if (scrollY < 100) {
         $('.nav').css({ 
             'padding': '23px 0',
-            'height': '100px'  
+            'height': '100px',
         });
     }
     _opacity();
+    slide_image_right(right);
 });
 
 $(window).resize(function () {
@@ -139,4 +140,28 @@ function _opacity () {
     else
         opacity = z * 2 / 1000;
     $('.section').css('opacity', opacity);
+};
+
+function slide_image_right(right) {
+    $('.colage').each(function () {
+        var ths = $(this);
+        if ((scrollY + $(window).height()) > ths.offset().top) {
+            if (right){
+                ths.css({
+                    'height': 'auto',
+                    'right': '0'
+                });
+                ths.children('img').css('opacity', 1);
+                right = false;
+            }
+            else {
+                ths.css({
+                    'height': 'auto',
+                    'left': '0'
+                });
+                ths.children('img').css('opacity', 1);
+                right = true;
+            } 
+        }
+    });
 };
