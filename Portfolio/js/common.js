@@ -1,5 +1,3 @@
-$('.img').css('display', 'none');
-$('.cont').css('display', 'none');
 var right = true;
 
 $(document).ready(function () {
@@ -121,7 +119,7 @@ $(window).scroll(function(){
         });
     }
     _opacity();
-    slide_image_right(right);
+    image_slide();
 });
 
 $(window).resize(function () {
@@ -164,4 +162,13 @@ function slide_image_right(right) {
             } 
         }
     });
+};
+
+function image_slide() {
+    $('.colage').each(function () {
+        var ths = $(this);
+        if ((scrollY + $(window).height()) > ths.offset().top) {
+            ths.addClass('animationPlay');
+            }
+        });
 };
