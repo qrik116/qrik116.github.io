@@ -139,30 +139,30 @@ function _opacity () {
         opacity = z * 2 / 1000;
     $('.section').css('opacity', opacity);
 };
-
-function slide_image_right(right) {
-    $('.colage').each(function () {
-        var ths = $(this);
-        if ((scrollY + $(window).height()) > ths.offset().top) {
-            if (right){
-                ths.css({
-                    'height': 'auto',
-                    'right': '0'
-                });
-                ths.children('img').css('opacity', 1);
-                right = false;
-            }
-            else {
-                ths.css({
-                    'height': 'auto',
-                    'left': '0'
-                });
-                ths.children('img').css('opacity', 1);
-                right = true;
-            } 
-        }
-    });
-};
+//
+//function slide_image_right(right) {
+//    $('.colage').each(function () {
+//        var ths = $(this);
+//        if ((scrollY + $(window).height()) > ths.offset().top) {
+//            if (right){
+//                ths.css({
+//                    'height': 'auto',
+//                    'right': '0'
+//                });
+//                ths.children('img').css('opacity', 1);
+//                right = false;
+//            }
+//            else {
+//                ths.css({
+//                    'height': 'auto',
+//                    'left': '0'
+//                });
+//                ths.children('img').css('opacity', 1);
+//                right = true;
+//            } 
+//        }
+//    });
+//};
 
 function image_slide() {
     $('.colage').each(function () {
