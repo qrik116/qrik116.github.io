@@ -1,0 +1,316 @@
+@import "bourbon/bourbon"
+
+body
+	font-family: "Raleway", sans-serif
+	font-weight: normal
+	font-size: 14px
+	min-width: 320px
+	line-height: 1.42857
+	-webkit-font-smoothing: antialised
+	overflow-x: hidden
+
+body input:focus:required:invalid,
+body textarea:focus:required:invalid
+	color: red
+body input:required:valid,
+body textarea:required:valid
+	color: green
+
+.hidden
+	display: none
+
+section, top_header
+	position: relative
+
+.anim_run
+	animation-play-state: running !important
+
+.anim_paus
+	animation-play-state: paused
+
+.top_header
+	min-height: 620px
+	height: 100vh
+	padding-top: 60px
+
+//------------- Loader
+.loader
+	position: fixed
+	background: none repeat scroll 0 0 #ffffff
+	bottom: 0
+	left: 0
+	right: 0
+	top: 0
+	width: 100%
+	z-index: 9999
+	.loader_inner
+		margin-top: -30px
+		margin-left: -30px
+		left: 50%
+		top: 40%
+		position: absolute
+//-------------------------------------
+
+//------------- Logo
+.logo_container
+	float: left
+	z-index: 2
+svg
+	height: 1%
+	width: 7em
+	background: rgba(255,255,255, 0.15)
+	background: -webkit-radial-gradient(circle rgba(255, 255, 255, .4), rgba(255, 255, 255, 0.3), rgba(255, 255, 255, 0.1))
+	background: radial-gradient(circle rgba(255, 255, 255, .4), rgba(255, 255, 255, 0.25), rgba(255, 255, 255, 0.1))
+	border-radius: 20px
+	-moz-box-shadow: 0 0 56px rgba(255,255,255,.4)
+	-webkit-box-shadow: 0 0 79px rgba(255,255,255,.4)
+	box-shadow: 0 0 56px rgba(255,255,255,.4)
+	path
+		height: 120px
+		width: 120px
+//-------------------------------------
+
+//------------- Main menu
+.main_mnu
+	position: fixed
+	width: 5em
+	height: 5em
+	z-index: 2
+	top: 80px
+	right: 8%
+	.btn
+		position: relative
+		width: 100%
+		height: 100%
+		background: rgba(255,255,255, 0.15)
+		border-radius: 50%
+		-webkit-transition: transform 0.3s
+		transition: transform 0.3s
+		cursor: pointer
+		z-index: 100
+	.line
+		position: absolute
+		height: 6px
+		width: 60%
+		background: #000
+		border-radius: 6px
+		top: 50%
+		left: 50%
+		-webkit-transform: translateX(-50%) translateY(-50%)
+		transform: translateX(-50%) translateY(-50%)
+		-webkit-transition: transform 0.3s, background-color 0.3s
+		transition: transform 0.3s, background-color 0.3s
+		&:before, &:after
+			content: ''
+			position: absolute
+			height: 6px
+			width: 100%
+			background: #000
+			border-radius: 6px
+			-webkit-transition: transform 0.3s, background-color 0.3s
+			transition: transform 0.3s, background-color 0.3s
+		&:before
+			top: -12px
+			-webkit-transform-origin: 13% 100%
+			transform-origin: 13% 100%
+		&:after
+			top: 12px
+			-webkit-transform-origin: 24% 30%
+			transform-origin: 24% 30%
+.trigger
+	.line
+		height: 0px
+		top: 45%
+		&:before
+			-webkit-transform: rotate(45deg)
+			transform: rotate(45deg)
+			width: 120%
+		&:after
+			-webkit-transform: rotate(-45deg)
+			transform: rotate(-45deg)
+			width: 120%
+
+.btn:hover
+	-webkit-transform: scale(1.2)
+	transform: scale(1.2)
+	.line
+		background: rgba(255,255,255, 0.7)
+		&:before, &:after
+			background-color: rgba(255,255,255, 0.7)
+//------------- Menu is hidde
+.top_mnu
+	position: fixed
+	display: none
+	width: 100%
+	height: 100%
+	background-color: rgba(0,0,0,.85)
+	z-index: 50
+	right: 0
+	top: 0
+	ul, li
+		list-style-type: none
+		padding: 0
+		margin: 0
+	ul
+		margin-top: 250px
+		text-align: center
+	a
+		color: #fff
+		display: block
+		padding: 25px 0
+		text-transform: uppercase
+		font-size: 12px
+		border: none
+		outline: none
+		transition: all 0.3s
+	li:after
+		position: absolute
+		content: ''
+		width: 0
+		left: 50%
+		height: 1px
+		background: #fff
+		transition: all .4s
+	li:hover
+		&:after
+			width: 400px
+			left: calc(50% - 200px)
+//-------------------------------------
+//-------------------------------------
+
+//------------- Top Title
+.top_wrapper
+	display: table
+	width: 100%
+	height: 100%
+	position: absolute
+	top: 0
+	left: 0
+	z-index: 1
+	.top_row
+		display: table-row
+		.top_cell
+			display: table-cell
+			text-align: center
+			vertical-align: middle
+			.title
+				display: inline-block
+				margin-left: 20px
+				margin-right: 20px
+				p
+					text-transform: uppercase
+					margin-top: 25px
+				h1
+					margin: 0
+					font-size: 4em
+					padding: 3px 10px
+					text-transform: uppercase
+					
+.line
+	height: 3px
+	width: 150px
+	display: inline-block
+.anim_delay
+	animation-delay: 0.7s
+//-------------------------------------
+
+//------------- Section
+section
+	padding: 80px 0
+	text-align: center
+	h2, h3
+		text-transform: uppercase
+		font-weight: 600
+		margin: 0
+	h2
+		font-size: 2em
+		margin-bottom: 25px
+	h3
+		font-size: 1em
+		margin-bottom: 20px
+	.line
+		height: 1px
+		width: 200px
+		margin-bottom: 50px
+
+//------------- About
+.s_about
+	h4
+		font-size: 1.2em
+		padding-bottom: 30px
+	.description
+		text-align: left
+	.photo
+		img
+			border-radius: 50%
+			width: 250px
+	.pers_info
+		text-align: left
+//-------------------------------------
+
+//------------- Pesume
+.s_resume
+	h4
+		font-size: 1.2em
+	.h4_w
+		text-align: right
+		padding-right: 10px
+	.h4_s
+		text-align: left
+		padding-left: 10px
+	.work .study
+		margin-bottom: 60px
+	p.color_bg
+		padding: 5px 10px
+		display: inline-block
+	.titl
+		letter-spacing: 3em
+		h4
+			text-transform: uppercase
+		h4, p
+			display: inline-block
+			letter-spacing: 1px
+	.work
+		text-align: right
+		padding-right: 10px
+	.study
+		text-align: left
+		padding-left: 10px
+//-------------------------------------
+
+//------------- Portfolio
+.s_portfolio
+	p
+		font-size: 12px
+//-------------------------------------
+
+//------------- Contact
+.s_contact
+	.discr_form
+		text-align: left
+		margin-bottom: 25px
+		p
+			margin: 0 0 0 50px
+		.icon
+			width: 30px
+			height: 30px
+			text-align: center
+			display: inline-block
+		h4
+			font-size: 1.2em
+			text-transform: uppercase
+			display: inline-block
+			margin: 5px 0
+	.discr_form:last-child
+		margin-bottom: 0			
+//-------------------------------------
+    		
+//-------------------------------------
+
+//------------- Main Footer
+.main_footer
+	padding: 40px 0
+	.descr
+		margin-left: 3%
+		font-size: 12px
+//-------------------------------------
