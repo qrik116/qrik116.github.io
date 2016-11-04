@@ -1,4 +1,15 @@
 $(document).ready(function () {
+    
+    // Попап плагин для фоток
+    $('.popup').magnificPopup({type: 'image'});
+    
+    // Анимация окон
+    $('.s_about .description').animated('fadeInLeft', 'fadeOutLeft', 0.2);
+    $('.s_about .photo').animated('flip', '', 0.1);
+    $('.s_about .pers_info').animated('fadeInRight', 'fadeOutRight', 0.6);
+    $('.s_resume .work').animated('fadeInLeft', 'fadeOutLeft', 0.1);
+    $('.s_resume .study').animated('fadeInRight', 'fadeOutRight', 0.7);
+    
     // Нажатие на кнопку меню
     $(".btn").click(function () {
         $(".btn").toggleClass("trigger");
@@ -23,18 +34,12 @@ $(document).ready(function () {
     });
 });
 
-// При скроле элементы резюме вылетают с боков
-$(window).scroll(function () {
-    slide();
-});
-
 // При загрузки окна страницы включение прелоадера и анимации текста в шапке
 $(window).load(function () {
     $('.loader_inner').fadeOut();
-    $('.loader').delay(400).fadeOut("slow");
-    var animationEnd = 'webkitAnimationEnd mozAnimationEnd MSAnimationEnd oanimationend animationend';
-    $('.title').children().addClass('anim_delay ' + animationEnd).one(animationEnd, function () {
-        $('.title').children().removeClass('anim_delay ' + animationEnd);
+    $('.loader').delay(400).fadeOut("slow", function () {
+        $('.title h1').animated('fadeInDown', 'fadeInUp', .3);
+    $('.title p, .title .line').animated('fadeInUp', 'fadeInDown', .5);
     });
 });
 
@@ -55,11 +60,3 @@ function slide() {
             ths.addClass('anim_run');
     });
 };
-
-//function clear_slide() {
-//    $('.work').each(function () {
-//        var ths = $(this);
-//        if ($(window).scrollTop() > (ths.parents('.s_resume').offset().top + ths.parents('.s_resume').height()))
-//            ths.removeClass('anim_run');
-//    });
-//};

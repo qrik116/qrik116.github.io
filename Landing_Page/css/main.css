@@ -32,6 +32,10 @@ section, top_header {
   height: 100vh;
   padding-top: 60px; }
 
+ul, li {
+  margin: 0;
+  padding: 0; }
+
 .loader {
   position: fixed;
   background: none repeat scroll 0 0 #ffffff;
@@ -143,9 +147,7 @@ svg {
   right: 0;
   top: 0; }
   .top_mnu ul, .top_mnu li {
-    list-style-type: none;
-    padding: 0;
-    margin: 0; }
+    list-style-type: none; }
   .top_mnu ul {
     margin-top: 250px;
     text-align: center; }
@@ -189,21 +191,22 @@ svg {
         margin-left: 20px;
         margin-right: 20px; }
         .top_wrapper .top_row .top_cell .title p {
+          opacity: 0;
           text-transform: uppercase;
           margin-top: 25px; }
         .top_wrapper .top_row .top_cell .title h1 {
+          opacity: 0;
           margin: 0;
           font-size: 4em;
           padding: 3px 10px;
           text-transform: uppercase; }
+        .top_wrapper .top_row .top_cell .title .line {
+          opacity: 0; }
 
 .line {
   height: 3px;
   width: 150px;
   display: inline-block; }
-
-.anim_delay {
-  animation-delay: 0.7s; }
 
 section {
   padding: 80px 0;
@@ -223,16 +226,33 @@ section {
     width: 200px;
     margin-bottom: 50px; }
 
+.social_wrap li {
+  display: inline-block;
+  list-style-type: none;
+  font-size: 1.6em;
+  padding: 0 !important;
+  text-align: center; }
+  .social_wrap li a {
+    transition: all 1s ease;
+    padding: 20px;
+    outline: none; }
+
 .s_about h4 {
   font-size: 1.2em;
   padding-bottom: 30px; }
 .s_about .description {
   text-align: left; }
 .s_about .photo img {
+  cursor: pointer;
   border-radius: 50%;
   width: 250px; }
 .s_about .pers_info {
   text-align: left; }
+  .s_about .pers_info ul {
+    margin-left: 13px; }
+    .s_about .pers_info ul li {
+      margin: 17px 0;
+      padding-left: 20px; }
 
 .s_resume h4 {
   font-size: 1.2em; }
@@ -283,9 +303,17 @@ section {
   margin-bottom: 0; }
 
 .main_footer {
+  text-align: center;
   padding: 40px 0; }
   .main_footer .descr {
+    display: inline-block;
     margin-left: 3%;
-    font-size: 12px; }
+    margin-top: 8px;
+    font-size: 12px;
+    float: left; }
+  .main_footer .social_wrap {
+    margin-right: 3%;
+    display: inline-block;
+    float: right; }
 
 /*# sourceMappingURL=main.css.map */

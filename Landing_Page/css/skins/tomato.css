@@ -71,3 +71,8 @@ a {
 
 .s_resume .border {
   border-right: 2px solid rgba(158, 158, 158, 0.4); }
+
+.social_wrap li a:hover {
+  color: #000;
+  background: -webkit-radial-gradient(circle 60px rgba(255, 255, 255, 0.25), rgba(255, 255, 255, 0), transparent);
+  background: radial-gradient(circle 60px rgba(255, 255, 255, 0.25), rgba(255, 255, 255, 0), transparent); }
