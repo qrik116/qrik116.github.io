@@ -76,3 +76,16 @@ a {
   color: #000;
   background: -webkit-radial-gradient(circle 60px rgba(255, 255, 255, 0.25), rgba(255, 255, 255, 0), transparent);
   background: radial-gradient(circle 60px rgba(255, 255, 255, 0.25), rgba(255, 255, 255, 0), transparent); }
+
+.s_portfolio li {
+  letter-spacing: 2px; }
+  .s_portfolio li:hover {
+    color: #FF6347;
+    border-bottom: #FF6347 1px solid; }
+.s_portfolio .active {
+  color: #FF6347;
+  border-bottom: #FF6347 1px solid; }
+
+.open_descr {
+  color: #FF6347;
+  border: #FF6347 1px solid; }

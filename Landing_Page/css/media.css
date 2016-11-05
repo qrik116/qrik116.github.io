@@ -25,6 +25,8 @@
         .line{width: 55%;}
     .trigger .line:before{top: -11px;}
     .trigger .line:after{top: 9px;}
+    section .line {margin-bottom: 0;}
+    .s_portfolio ul li {margin: 40px 0 10px}
 }
 
 /* Extra Small Devices, Phones */

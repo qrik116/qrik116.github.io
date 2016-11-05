@@ -232,6 +232,8 @@ section
 	h3
 		font-size: 1em
 		margin-bottom: 20px
+	h4
+		text-align: center
 	.line
 		height: 1px
 		width: 200px
@@ -254,14 +256,21 @@ section
 		font-size: 1.2em
 		padding-bottom: 30px
 	.description
+		padding-bottom: 20px
 		text-align: left
 	.photo
+		padding-bottom: 20px
 		img
 			cursor: pointer
 			border-radius: 50%
 			width: 250px
 	.pers_info
+		padding-bottom: 20px
 		text-align: left
+		h5
+			letter-spacing: 2px
+			font-size: 1.2em
+			padding-bottom: 10px
 		ul
 			margin-left: 13px
 			li
@@ -271,7 +280,16 @@ section
 
 //------------- Pesume
 .s_resume
+	i
+		display: block
+		font-size: 4em
+		text-align: left
+		margin: 0 10px
+	.border
+		i
+			text-align: right
 	h4
+		font-style: normal
 		font-size: 1.2em
 	.h4_w
 		text-align: right
@@ -279,18 +297,23 @@ section
 	.h4_s
 		text-align: left
 		padding-left: 10px
-	.work .study
-		margin-bottom: 60px
+	.work, .study
+		margin-bottom: 40px
 	p.color_bg
 		padding: 5px 10px
 		display: inline-block
 	.titl
 		letter-spacing: 3em
+		margin: 10px 0
 		h4
 			text-transform: uppercase
 		h4, p
 			display: inline-block
 			letter-spacing: 1px
+			margin: 0
+			padding: 0
+		p
+			font-style: italic
 	.work
 		text-align: right
 		padding-right: 10px
@@ -301,8 +324,54 @@ section
 
 //------------- Portfolio
 .s_portfolio
-	p
+	ul li
+		list-style-type: none
+		display: inline-block
+		margin: 0 10px
+		cursor: pointer
 		font-size: 12px
+		font-style: italic
+		transition: all .5s ease
+	.portfolio_grid
+		padding-top: 50px
+		.portfolio_item
+			padding: 0
+			display: none
+			img
+				width: 100%
+			.hover_cont
+				opacity: 0
+				position: absolute
+				top: 0
+				left: 0
+				width: 100%
+				height: 100%
+				background: rgba(0,0,0,.7)
+				transition: all 0.4s ease
+				h3
+					letter-spacing: 2px
+					margin-bottom: 0
+			.open_descr
+				display: inline-block
+				padding: 7px 15px
+				cursor: pointer
+				outline: none
+			&:hover .hover_cont
+				opacity: 1
+				padding-top: 20%
+.descr_work
+	background: #fff
+	text-align: center
+	max-width: 600px
+	margin: auto
+	padding-top: 20px
+	img
+		width: 100%
+	h3
+		text-transform: uppercase
+	p
+		margin: 17px 25px
+		text-align: left
 //-------------------------------------
 
 //------------- Contact
@@ -323,7 +392,7 @@ section
 			display: inline-block
 			margin: 5px 0
 	.discr_form:last-child
-		margin-bottom: 0			
+		margin-bottom: 0
 //-------------------------------------
     		
 //-------------------------------------

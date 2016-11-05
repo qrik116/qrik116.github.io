@@ -1,5 +1,15 @@
 $(document).ready(function () {
     
+    $('.open_descr').magnificPopup({type:'inline'});
+    
+    $('#Container').mixItUp();
+    
+    $('.s_portfolio li').click(function () {
+        $('.s_portfolio .active').removeClass('active');
+        $(this).addClass('active');
+    });
+    
+    
     // Попап плагин для фоток
     $('.popup').magnificPopup({type: 'image'});
     
@@ -7,8 +17,8 @@ $(document).ready(function () {
     $('.s_about .description').animated('fadeInLeft', 'fadeOutLeft', 0.2);
     $('.s_about .photo').animated('flip', '', 0.1);
     $('.s_about .pers_info').animated('fadeInRight', 'fadeOutRight', 0.6);
-    $('.s_resume .work').animated('fadeInLeft', 'fadeOutLeft', 0.1);
-    $('.s_resume .study').animated('fadeInRight', 'fadeOutRight', 0.7);
+    $('.s_resume .work').animated('fadeInLeft', 'fadeOutLeft');
+    $('.s_resume .study').animated('fadeInRight', 'fadeOutRight');
     
     // Нажатие на кнопку меню
     $(".btn").click(function () {
@@ -32,6 +42,12 @@ $(document).ready(function () {
             scrollTop: top
         }, 1500);
     });
+    
+    $('.portfolio_grid').children().each(function (i) {
+        $(this).find('a').attr('href', '#work_' + i);
+        $(this).find('.descr_work').attr('id', 'work_' + i);
+    });
+    
 });
 
 // При загрузки окна страницы включение прелоадера и анимации текста в шапке
