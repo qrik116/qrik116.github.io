@@ -27,6 +27,7 @@
     .trigger .line:after{top: 9px;}
     section .line {margin-bottom: 0;}
     .s_portfolio ul li {margin: 40px 0 10px}
+    .social_wrap li a {padding: 6px;}
 }
 
 /* Extra Small Devices, Phones */
