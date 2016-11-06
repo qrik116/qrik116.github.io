@@ -102,8 +102,6 @@ $(document).ready(function () {
     $('.fullscrin').css('padding-bottom', ($(window).height() - ($('.nav').height() + Number($('.nav').css('padding-top').replace("px", "")) * 2))/2);
     $('.section').css('padding-top', ($(window).height() - $('.text_centr').height()) / 2 - 16.08);
     $('.section').css('padding-bottom', ($(window).height() - $('.text_centr').height()) / 2 -16.08);
-    
-    //_opacity();
 });
 
 $(window).scroll(function(){
@@ -119,7 +117,6 @@ $(window).scroll(function(){
             'height': '100px',
         });
     }
-    _opacity();
     image_slide();
 });
 
@@ -129,17 +126,6 @@ $(window).resize(function () {
     $('.section').css('padding-top', ($(window).height() - $('.text_centr').height()) / 2 - 16.08);
     $('.section').css('padding-bottom', ($(window).height() - $('.text_centr').height()) / 2 - 16.08);
 });
-
-function _opacity () {
-    var s = Number($('.section').css('padding-bottom').replace('px', '')) + $('.section').height(); //padding-bottom теста + высота
-    var z = s - $(window).scrollTop() - 100; //растояние затухания
-    var opacity = 1;
-    if (z < 0)
-        opacity = 0
-    else
-        opacity = z * 2 / 1000;
-    $('.section').css('opacity', opacity);
-};
 
 function image_slide() {
     $('.colage').each(function () {
