@@ -102,17 +102,18 @@ $(document).ready(function () {
     $('.fullscrin').css('padding-bottom', ($(window).height() - ($('.nav').height() + Number($('.nav').css('padding-top').replace("px", "")) * 2))/2);
     $('.section').css('padding-top', ($(window).height() - $('.text_centr').height()) / 2 - 16.08);
     $('.section').css('padding-bottom', ($(window).height() - $('.text_centr').height()) / 2 -16.08);
-    _opacity();
+    
+    //_opacity();
 });
 
 $(window).scroll(function(){
-    if (scrollY > 100){
+    if ($(this).scrollTop() > 100){
         $('.nav').css({ 
             'padding': '0',
             'height': '50px',
         });
     }
-    if (scrollY < 100) {
+    if ($(this).scrollTop() < 100) {
         $('.nav').css({ 
             'padding': '23px 0',
             'height': '100px',
@@ -131,7 +132,7 @@ $(window).resize(function () {
 
 function _opacity () {
     var s = Number($('.section').css('padding-bottom').replace('px', '')) + $('.section').height(); //padding-bottom теста + высота
-    var z = s - scrollY - 100; //растояние затухания
+    var z = s - $(window).scrollTop() - 100; //растояние затухания
     var opacity = 1;
     if (z < 0)
         opacity = 0
@@ -139,36 +140,12 @@ function _opacity () {
         opacity = z * 2 / 1000;
     $('.section').css('opacity', opacity);
 };
-//
-//function slide_image_right(right) {
-//    $('.colage').each(function () {
-//        var ths = $(this);
-//        if ((scrollY + $(window).height()) > ths.offset().top) {
-//            if (right){
-//                ths.css({
-//                    'height': 'auto',
-//                    'right': '0'
-//                });
-//                ths.children('img').css('opacity', 1);
-//                right = false;
-//            }
-//            else {
-//                ths.css({
-//                    'height': 'auto',
-//                    'left': '0'
-//                });
-//                ths.children('img').css('opacity', 1);
-//                right = true;
-//            } 
-//        }
-//    });
-//};
 
 function image_slide() {
     $('.colage').each(function () {
         var ths = $(this);
-        if ((scrollY + $(window).height()) > ths.offset().top) {
+        if (($(window).scrollTop() + $(window).height()) > ths.offset().top) {
             ths.addClass('animationPlay');
-            }
-        });
+        }
+    });
 };

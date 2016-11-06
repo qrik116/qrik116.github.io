@@ -9,22 +9,21 @@
 /* Medium Devices, Desktops */
 
 @media only screen and (max-width: 992px) {
-    .margin_bottom{
-        margin-left: 11%;
+    .margin_bottom .colection{
+        margin: 0 !important;
     }
 }
-
-
 /* Small Devices, Tablets */
 
-@media only screen and (max-width: 768px) {
+@media only screen and (max-width: 767px) {
     .menu {
         display: none;
         position: absolute;
-        top: 59px;
+        top: 50px;
         left: 0px;
         background-color: rgba(245, 245, 245, .9);
         width: 100%;
+        padding-top: 7px;
     }
     .menu ul {
         margin: 0;
@@ -34,9 +33,12 @@
         float: none;
         margin-bottom: 13px;
     }
+    .text_centr h1 {font-size: 2em;}
+/*
     .margin_bottom{
         margin-left: 0;
     }
+*/
 }
 
 
@@ -80,7 +82,4 @@
 /* Large Devices, Wide Screens */
 
 @media only screen and (min-width: 1200px) {
-    .col-lg-offset-1{
-    margin-left: 6.5%;
-}
 }

@@ -1,0 +1,36 @@
+.fullscrin{
+    margin: 0px auto;
+}
+.section{
+    position: fixed;
+    top: 0;
+    width: 100%;
+}
+.text_centr p{
+    letter-spacing: 1px;
+    text-transform: none;
+    font-family: "VollkornItalic", sans-serif;
+    font-size: 1.2em;
+}
+.text_centr .circl {
+    margin-top: 50px;
+    font-size: .7em;
+}
+.colage {
+    position: relative;
+    overflow: hidden;
+    margin: 0 0 30px 0;
+    width: 100%;
+    height: 100%;
+    -webkit-transition: all 2s cubic-bezier(.79,.14,.15,.86);
+    -moz-transition: all 2s cubic-bezier(.79,.14,.15,.86);
+    -o-transition: all 2s cubic-bezier(.79,.14,.15,.86);
+    transition: all 2s cubic-bezier(.79,.14,.15,.86);
+}
+.colage img{
+    width: 100%;
+    -webkit-transition: all 2.5s ease;
+    -moz-transition: all 2.5s ease;
+    -o-transition: all 2.5s ease;
+    transition: all 2.5s ease;
+}
