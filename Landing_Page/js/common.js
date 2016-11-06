@@ -48,6 +48,9 @@ $(document).ready(function () {
         $(this).find('.descr_work').attr('id', 'work_' + i);
     });
     
+    $("input,select,textarea").jqBootstrapValidation();
+    
+    inspection(); // Моя функция на значки
 });
 
 // При загрузки окна страницы включение прелоадера и анимации текста в шапке
@@ -59,20 +62,35 @@ $(window).load(function () {
     });
 });
 
-function slide() {
-    $('.work').each(function () {
-        var ths = $(this);
-        if (($(window).scrollTop() + $(window).height()) > (ths.offset().top + (ths.height()/2)))
-            ths.addClass('anim_run');
+// Установка значков и их цвета в зависимости от валидности данных
+function inspection () {
+    $('input').focusin(function () {
+        if($(this).is(':focus:required:invalid')){
+            $(this).parent('.controls').children('i').css({'display': 'block', 'color': 'red'});
+            $(this).parent('.controls').children('i').removeClass('fa-check');
+            $(this).parent('.controls').children('i').addClass('fa-times');
+        }
+        if($(this).is(':focus:required:valid')){
+            $(this).parent('.controls').children('i').css({'display': 'block', 'color': 'green'});
+            $(this).parent('.controls').children('i').removeClass('fa-times');
+            $(this).parent('.controls').children('i').addClass('fa-check');
+        }
     });
-    $('.study').each(function () {
-        var ths = $(this);
-        if (($(window).scrollTop() + $(window).height()) > (ths.offset().top + (ths.height()/2)))
-            ths.addClass('anim_run');
+    $('input').focusout(function () {
+        if($(this).is(':required:invalid')){
+            $(this).parent('.controls').children('i').css({'display': 'block', 'color': 'red'});
+            $(this).parent('.controls').children('i').removeClass('fa-check');
+            $(this).parent('.controls').children('i').addClass('fa-times');
+        }
+        if($(this).is(':required:valid')){
+            $(this).parent('.controls').children('i').css({'display': 'block', 'color': 'green'});
+            $(this).parent('.controls').children('i').removeClass('fa-times');
+            $(this).parent('.controls').children('i').addClass('fa-check');
+        }
+        if($(this).val().length == 0){
+            $(this).parent('.controls').children('i').css({'display': 'none', 'color': 'black'});
+            $(this).parent('.controls').children('i').removeClass('fa-times');
+            $(this).parent('.controls').children('i').removeClass('fa-check');
+        }
     });
-    $('.s_about .animated').each(function () {
-        var ths = $(this);
-        if (($(window).scrollTop() + $(window).height()) > (ths.offset().top + (ths.height()/2)))
-            ths.addClass('anim_run');
-    });
-};
+}

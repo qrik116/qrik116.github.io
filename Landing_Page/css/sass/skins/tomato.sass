@@ -91,3 +91,21 @@ a
 .open_descr
 	color: $color
 	border: $color 1px solid
+.main_form
+	+kerning(2)
+	strong
+		color: $color
+	li
+		color: $color
+	input,
+	textarea
+		border: $bg_light 1px solid
+		+kerning(2)
+	input:focus,
+	textarea:focus
+		border: $color 1px solid
+	button
+		background: $color
+		color: #fff
+	.text_danger
+		color: $color

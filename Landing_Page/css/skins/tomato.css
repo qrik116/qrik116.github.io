@@ -89,3 +89,22 @@ a {
 .open_descr {
   color: #FF6347;
   border: #FF6347 1px solid; }
+
+.main_form {
+  letter-spacing: 2px; }
+  .main_form strong {
+    color: #FF6347; }
+  .main_form li {
+    color: #FF6347; }
+  .main_form input,
+  .main_form textarea {
+    border: rgba(158, 158, 158, 0.4) 1px solid;
+    letter-spacing: 2px; }
+  .main_form input:focus,
+  .main_form textarea:focus {
+    border: #FF6347 1px solid; }
+  .main_form button {
+    background: #FF6347;
+    color: #fff; }
+  .main_form .text_danger {
+    color: #FF6347; }

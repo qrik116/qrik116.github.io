@@ -7,9 +7,8 @@
 
 /* Medium Devices, Desktops */
 @media only screen and (max-width : 992px) {
-    .s_about .photo img{
-        width: 220px !important
-    }
+    .s_about .photo img{width: 220px !important}
+    .s_resume .titl{letter-spacing: 3px}
 }
 
 /* Small Devices, Tablets */
@@ -25,9 +24,10 @@
         .line{width: 55%;}
     .trigger .line:before{top: -11px;}
     .trigger .line:after{top: 9px;}
-    section .line {margin-bottom: 0;}
+    section .line {margin-bottom: 10px;}
     .s_portfolio ul li {margin: 40px 0 10px}
     .social_wrap li a {padding: 6px;}
+    .s_resume .titl{letter-spacing: 3em}
 }
 
 /* Extra Small Devices, Phones */

@@ -11,10 +11,9 @@ body
 
 body input:focus:required:invalid,
 body textarea:focus:required:invalid
-	color: red
+
 body input:required:valid,
 body textarea:required:valid
-	color: green
 
 .hidden
 	display: none
@@ -378,6 +377,7 @@ section
 .s_contact
 	.discr_form
 		text-align: left
+		margin-top: 10px
 		margin-bottom: 25px
 		p
 			margin: 0 0 0 50px
@@ -393,6 +393,41 @@ section
 			margin: 5px 0
 	.discr_form:last-child
 		margin-bottom: 0
+.main_form
+	text-align: left
+	.mes
+		margin-left: 12px
+	li
+		list-style-type: none
+		display: inline-block
+		margin: 10px 0 0 18px
+	.control-group
+		margin-bottom: 20px
+		display: block
+		.controls
+			position: relative
+			input,
+			textarea
+				display: block
+				width: 100%
+				margin-top: 10px
+				padding: 15px
+				line-height: 20px
+				font-size: 12px
+				background-color: transparent
+			i
+				display: none
+				position: absolute
+				top: 37%
+				right: 0
+				margin-right: 10px
+	button
+		float: right
+		border: none
+		line-height: 46px
+		padding: 0 25px
+		font-size: 14px
+		font-weight: 600
 //-------------------------------------
     		
 //-------------------------------------

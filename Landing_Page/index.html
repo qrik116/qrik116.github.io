@@ -312,10 +312,30 @@
                     </div>
                 </div>
                 <div class="col-lg-6">
-                    <form action="post">
-                        <input type="text">
-                        <input type="text">
-                        <input type="text">
+                    <form action="https://formspree.io/qrik116@gmail.com" class="main_form" method="POST" novalidate>
+                       <div class="control-group">
+                            <label class="control-label"><strong>*</strong> Ваше имя:</label>
+                            <div class="controls">
+                                <input type="text" name="name" placeholder="Ваше имя:" data-validation-required-message="* Это поле обязательно для заполнения" required />
+                                <i class="fa" aria-hidden="true"></i>
+                            </div>
+                            <p class="help-block"></p>
+                        </div>
+                        <div class="control-group">
+                            <label class="control-label"><strong>*</strong> Электронная почта:</label>
+                            <div class="controls">
+                                <input type="email" name="email" placeholder="Email:" data-validation-email-message="* Не верно введена электронная почта" data-validation-required-message="* Это поле обязательно для заполнения" required />
+                                <i class="fa" aria-hidden="true"></i>
+                            </div>
+                            <p class="help-block"></p>
+                        </div>
+                        <div class="control-group">
+                            <label class="control-label mes">Сообщение:</label>
+                            <div class="controls">
+                                <textarea name="message" cols="30" rows="5" placeholder="Ваше сообщение"></textarea>
+                            </div>
+                        </div>
+                        <button>Отправить</button>
                     </form>
                 </div>
             </div>
