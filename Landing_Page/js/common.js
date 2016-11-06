@@ -36,12 +36,13 @@ $(document).ready(function () {
         $('.top_mnu').fadeOut(600);
         $('.top_mnu li a').removeClass('fadeInUp animated');
         $(".btn").toggleClass("trigger");
-        var id = $(this).attr('href');
-        var top = $(id).offset().top;
-        $('body, html').animate({
-            scrollTop: top
-        }, 1500);
+//        var id = $(this).attr('href');
+//        var top = $(id).offset().top;    Вместо этого использую Page2id
+//        $('body, html').animate({
+//            scrollTop: top
+//        }, 1500);
     });
+    $(".top_mnu a[href*='#']").mPageScroll2id();
     
     $('.portfolio_grid').children().each(function (i) {
         $(this).find('a').attr('href', '#work_' + i);
