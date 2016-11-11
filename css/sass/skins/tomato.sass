@@ -1,0 +1,111 @@
+@import "../bourbon/bourbon"
+
+$color: #FF6347 //Theme skin
+$text_opgray: rgba(255, 255, 255, .4)
+$bg_dark: #1E1C1C
+$bg_default: #888
+$bg_light: rgba(158, 158, 158, 0.4)
+
+@mixin kerning($kerning)
+	letter-spacing: $kerning + px
+
+body
+	color: $bg_dark
+	+kerning(1)
+a
+	color: $color
+.top_wrapper
+	color: $bg_default
+.theme_color
+	color: $color
+.color_bg
+	background-color: $color
+	color: #fff
+.color_border
+	border-color: $color
+.bg_light
+	background-color: $bg_light
+	color: #000
+	h2	
+		+kerning(2)
+	h3
+		+kerning(5)
+	.line
+		background-color: #000
+.bg_dark
+	background-color: $bg_dark
+	color: #fff
+	h2	
+		+kerning(2)
+	h3
+		+kerning(5)
+	.line
+		background-color: #fff
+.bg_default
+	background-color: #fff
+	h2	
+		+kerning(2)
+	h3
+		+kerning(5)
+	.line
+		background: #000
+.menu
+	background: $bg_dark
+.top_mnu
+	a
+		+kerning(2)
+	li:hover
+		a
+			color: $color
+		&:after
+			background: $color
+.title /*header title шапка сайта*/
+	h1
+		+kerning(4)
+		color: $text_opgray
+		//border-bottom: 2px solid $text_opgray
+	.line
+		background: $text_opgray
+	p
+		color: $text_opgray
+		+kerning(4)
+
+.descr	/*main footer*/
+	+kerning(1)
+.s_resume /*border resume on center*/
+	.border
+		border-right: 2px solid $bg_light
+
+.social_wrap li a:hover
+	color: #000
+	background: radial-gradient(circle 50px rgba(255, 255, 255, 0.25), rgba(255, 255, 255, 0), rgba(0, 0, 0, 0))
+.s_portfolio
+	li
+		+kerning(2)
+		&:hover
+			color: $color
+			border-bottom: $color 1px solid
+	.active
+		color: $color
+		border-bottom: $color 1px solid
+.open_descr
+	color: $color
+	border: $color 1px solid
+.main_form
+	+kerning(2)
+	strong
+		color: $color
+	li
+		color: $color
+	input,
+	textarea
+		border: $bg_light 1px solid
+		+kerning(2)
+	input:focus,
+	textarea:focus
+		border: $color 1px solid
+	button
+		background: $color
+		color: #fff
+	.text_danger
+		color: $color

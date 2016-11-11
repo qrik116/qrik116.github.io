@@ -1,0 +1,110 @@
+body {
+  color: #1E1C1C;
+  letter-spacing: 1px; }
+
+a {
+  color: #FF6347; }
+
+.top_wrapper {
+  color: #888; }
+
+.theme_color {
+  color: #FF6347; }
+
+.color_bg {
+  background-color: #FF6347;
+  color: #fff; }
+
+.color_border {
+  border-color: #FF6347; }
+
+.bg_light {
+  background-color: rgba(158, 158, 158, 0.4);
+  color: #000; }
+  .bg_light h2 {
+    letter-spacing: 2px; }
+  .bg_light h3 {
+    letter-spacing: 5px; }
+  .bg_light .line {
+    background-color: #000; }
+
+.bg_dark {
+  background-color: #1E1C1C;
+  color: #fff; }
+  .bg_dark h2 {
+    letter-spacing: 2px; }
+  .bg_dark h3 {
+    letter-spacing: 5px; }
+  .bg_dark .line {
+    background-color: #fff; }
+
+.bg_default {
+  background-color: #fff; }
+  .bg_default h2 {
+    letter-spacing: 2px; }
+  .bg_default h3 {
+    letter-spacing: 5px; }
+  .bg_default .line {
+    background: #000; }
+
+.menu {
+  background: #1E1C1C; }
+
+.top_mnu a {
+  letter-spacing: 2px; }
+.top_mnu li:hover a {
+  color: #FF6347; }
+.top_mnu li:hover:after {
+  background: #FF6347; }
+
+.title h1 {
+  letter-spacing: 4px;
+  color: rgba(255, 255, 255, 0.4); }
+.title .line {
+  background: rgba(255, 255, 255, 0.4); }
+.title p {
+  color: rgba(255, 255, 255, 0.4);
+  letter-spacing: 4px; }
+
+.descr {
+  letter-spacing: 1px; }
+
+.s_resume .border {
+  border-right: 2px solid rgba(158, 158, 158, 0.4); }
+
+.social_wrap li a:hover {
+  color: #000;
+  background: -webkit-radial-gradient(circle 50px rgba(255, 255, 255, 0.25), rgba(255, 255, 255, 0), transparent);
+  background: radial-gradient(circle 50px rgba(255, 255, 255, 0.25), rgba(255, 255, 255, 0), transparent); }
+
+.s_portfolio li {
+  letter-spacing: 2px; }
+  .s_portfolio li:hover {
+    color: #FF6347;
+    border-bottom: #FF6347 1px solid; }
+.s_portfolio .active {
+  color: #FF6347;
+  border-bottom: #FF6347 1px solid; }
+
+.open_descr {
+  color: #FF6347;
+  border: #FF6347 1px solid; }
+
+.main_form {
+  letter-spacing: 2px; }
+  .main_form strong {
+    color: #FF6347; }
+  .main_form li {
+    color: #FF6347; }
+  .main_form input,
+  .main_form textarea {
+    border: rgba(158, 158, 158, 0.4) 1px solid;
+    letter-spacing: 2px; }
+  .main_form input:focus,
+  .main_form textarea:focus {
+    border: #FF6347 1px solid; }
+  .main_form button {
+    background: #FF6347;
+    color: #fff; }
+  .main_form .text_danger {
+    color: #FF6347; }
