@@ -406,8 +406,6 @@ section {
     text-transform: uppercase;
     display: inline-block;
     margin: 5px 0; }
-.s_contact .discr_form:last-child {
-  margin-bottom: 0; }
 
 .main_form {
   text-align: left; }
