@@ -301,7 +301,11 @@
     <script type="text/javascript">
         document.getElementById("button_iq").addEventListener("click", function(e) {
 			e.preventDefault();
-			var get_url = window.location.href.split('?')[1];
+			var url = window.location.href;
+		var get_url = url.split('?')[1];
+		if (get_url == undefined){
+			console.log('not GET');
+		} else {
 			var index_first_u = get_url.indexOf(';u');
 			var sub_str = get_url.substr(0, index_first_u-1);
 			var utm_str = get_url.substr(index_first_u+1, get_url.length);
@@ -317,6 +321,10 @@
 				if (utm_arr[i].match(/utm/i))
 					utm[i] = utm_arr[i].split('=')[1].split('&')[0];
 			}
+			//		console.log(get_url);
+			//		console.log(index_first_u);
+			//		console.log(sub_arr);
+			//		console.log(utm_arr);
 			console.log('Массив sub: ');
 			console.log(sub);
 			setTimeout(function () {
@@ -324,9 +332,10 @@
 				console.log(utm);
 				setTimeout(function () {
 					console.log('Rehost');
-					window.location.href = "http://yandex.ru";
+					document.location.href = "http://yandex.ru";
 				}, 3000);
 			}, 2000);
+		}
         }, false)
 
         function getRandomResult (min, max) {

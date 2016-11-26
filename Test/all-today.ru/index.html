@@ -188,35 +188,39 @@
     <script type="text/javascript">
 //		var url = window.location.href;
 //		var get_url = url.split('?')[1];
-//		var index_first_u = get_url.indexOf(';u');
-//		var sub_str = get_url.substr(0, index_first_u-1);
-//		var utm_str = get_url.substr(index_first_u+1, get_url.length);
-//		var sub_arr = sub_str.split(';');
-//		var utm_arr = utm_str.split(';');
-//		var sub = new Array();
-//		var utm = new Array();
-//		for (var i = 0; i < sub_arr.length; i++){
-//			if (sub_arr[i].match(/sub/i))
-//				sub[i] = sub_arr[i].split('=')[1].split('&')[0];
-//		}
-//		for (var i = 0; i < utm_arr.length; i++){
-//			if (utm_arr[i].match(/utm/i))
-//				utm[i] = utm_arr[i].split('=')[1].split('&')[0];
-//		}
-////		console.log(get_url);
-////		console.log(index_first_u);
-////		console.log(sub_arr);
-////		console.log(utm_arr);
-//		console.log('Массив sub: ');
-//		console.log(sub);
-//		setTimeout(function () {
-//			console.log('Массив utm: ');
-//			console.log(utm);
+//		if (get_url == undefined){
+//			console.log('not GET');
+//		} else {
+//			var index_first_u = get_url.indexOf(';u');
+//			var sub_str = get_url.substr(0, index_first_u-1);
+//			var utm_str = get_url.substr(index_first_u+1, get_url.length);
+//			var sub_arr = sub_str.split(';');
+//			var utm_arr = utm_str.split(';');
+//			var sub = new Array();
+//			var utm = new Array();
+//			for (var i = 0; i < sub_arr.length; i++){
+//				if (sub_arr[i].match(/sub/i))
+//					sub[i] = sub_arr[i].split('=')[1].split('&')[0];
+//			}
+//			for (var i = 0; i < utm_arr.length; i++){
+//				if (utm_arr[i].match(/utm/i))
+//					utm[i] = utm_arr[i].split('=')[1].split('&')[0];
+//			}
+//			//		console.log(get_url);
+//			//		console.log(index_first_u);
+//			//		console.log(sub_arr);
+//			//		console.log(utm_arr);
+//			console.log('Массив sub: ');
+//			console.log(sub);
 //			setTimeout(function () {
-//				console.log('Rehost');
-//				document.location.href = "http://yandex.ru";
-//			}, 3000);
-//		}, 2000);
+//				console.log('Массив utm: ');
+//				console.log(utm);
+//				setTimeout(function () {
+//					console.log('Rehost');
+//					//document.location.href = "http://yandex.ru";
+//				}, 3000);
+//			}, 2000);
+//		}
     </script>
 </body>
 </html>
