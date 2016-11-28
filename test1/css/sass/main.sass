@@ -1,0 +1,143 @@
+@import "bourbon/bourbon"
+
+body
+	font-family: "Open Sans", sans-serif
+	font-weight: normal
+	font-size: 14px
+	min-width: 320px
+	line-height: 1.42857
+	-webkit-font-smoothing: antialised
+	overflow-x: hidden
+	color: #fff
+	background: url("../img/bcg.jpg") no-repeat
+	background-size: 100%
+
+body input:focus:required:invalid,
+body textarea:focus:required:invalid
+
+body input:required:valid,
+body textarea:required:valid
+
+.hidden
+	display: none
+
+a
+	outline: none !important
+
+ul, li
+	margin: 0
+	padding: 0
+	list-style-type: none
+	display: inline-block
+
+.bgvideo 
+	position: fixed
+	right: 0
+	bottom: 0
+	min-width: 100%
+	min-height: 100%
+	width: auto
+	height: auto
+	z-index: -9999
+iframe
+	position: absolute
+.background
+	z-index: -9000
+	position: fixed
+	top: 0
+	left: 0
+	width: 100%
+	height: 100%
+	background-color: rgba(0,0,0,0.7)
+//---------------------Main Header
+header
+	margin: 25px 45px 0
+	a
+		color: #fff
+	img
+		padding-top: 8px
+	i
+		margin-left: 20px
+		font-size: 16px
+	.contact
+		float: right
+		display: inline-block
+		font-size: 13px
+		i
+			margin-left: 30px
+	nav
+		font-size: 12px
+		font-weight: bold
+		text-transform: uppercase
+		margin-top: 30px
+		float: right
+		li:first-child
+			opacity: 0.3
+			margin-left: 0
+		li
+			opacity: 0.8
+			margin-left: 67px
+	&:after
+		content: ''
+		width: 100%
+		height: 1px
+		background-color: #fff
+		opacity: 0.2
+		position: absolute
+		margin-top: 25px
+		left: 0
+//---------------------------------
+
+//---------------------Top Wrapper
+.top_wrapper
+	display: table
+	width: 100%
+	height: 100%
+	position: absolute
+	top: 0
+	left: 0
+	z-index: -1
+	.top_row
+		display: table-row
+		.top_cell
+			display: table-cell
+			text-align: center
+			vertical-align: middle
+			.title
+				width: 364px
+				display: inline-block
+				text-transform: uppercase
+				h1
+					display: inline-block
+					margin: 0
+					color: #fbd764
+					font-size: 2.5em
+					&:before, &:after
+						content: ' '
+						width: 100%
+						height: 1px
+						background-color: #fff
+						opacity: 0.6
+						display: inline-block
+						line-height: 0
+						margin-bottom: 10px
+				p
+					margin: 0
+					font-size: 17px
+					opacity: 0.9
+					&:first-child
+						font-size: 20px
+footer
+	text-align: left
+	position: absolute
+	bottom: 24px
+	left: 85px
+	font-size: 13px
+	opacity: 0.5
+	width: 100%
+	p
+		display: inline-block
+		margin: 0
+	img
+		margin-left: 25px
+//---------------------------------
