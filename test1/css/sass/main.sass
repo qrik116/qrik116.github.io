@@ -4,7 +4,7 @@ body
 	font-family: "Open Sans", sans-serif
 	font-weight: normal
 	font-size: 14px
-	min-width: 320px
+	min-width: 385px
 	line-height: 1.42857
 	-webkit-font-smoothing: antialised
 	overflow-x: hidden
@@ -52,19 +52,33 @@ iframe
 //---------------------Main Header
 header
 	margin: 25px 45px 0
-	a
-		color: #fff
 	img
 		padding-top: 8px
-	i
+	a
+		color: #fff
 		margin-left: 20px
-		font-size: 16px
+		font-size: 13px
+		&:first-child
+			margin-left: 0
 	.contact
 		float: right
 		display: inline-block
-		font-size: 13px
 		i
+			font-size: 15px
+		li
+			font-size: 13px
 			margin-left: 30px
+			&:first-child
+				margin-left: 0
+			&:last-child
+				font-size: 14px
+				font-weight: bold
+				i
+					font-size: 16px
+			i
+				margin-right: 7px
+		ul
+			margin-left: 32px
 	nav
 		font-size: 12px
 		font-weight: bold
