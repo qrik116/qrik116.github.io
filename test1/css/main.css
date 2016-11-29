@@ -140,10 +140,11 @@ footer {
   bottom: 24px;
   left: 0;
   font-size: 13px;
-  opacity: 0.5;
-  width: 100%;
-  overflow-y: hidden; }
+  overflow-y: hidden;
+  display: block;
+  width: 100%; }
   footer p {
+    opacity: 0.5;
     display: inline-block;
     margin-left: 85px; }
   footer img {

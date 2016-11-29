@@ -2,7 +2,7 @@ body {
   font-family: "Open Sans", sans-serif;
   font-weight: normal;
   font-size: 14px;
-  min-width: 320px;
+  min-width: 385px;
   line-height: 1.42857;
   -webkit-font-smoothing: antialised;
   overflow-x: hidden;
@@ -33,9 +33,7 @@ ul, li {
   z-index: -9999; }
 
 iframe {
-  position: absolute;
-  height: 100%;
-  width: 100%; }
+  position: absolute; }
 
 .background {
   z-index: -9000;
@@ -48,19 +46,33 @@ iframe {
 
 header {
   margin: 25px 45px 0; }
-  header a {
-    color: #fff; }
   header img {
     padding-top: 8px; }
-  header i {
+  header a {
+    color: #fff;
     margin-left: 20px;
-    font-size: 16px; }
+    font-size: 13px; }
+    header a:first-child {
+      margin-left: 0; }
   header .contact {
     float: right;
-    display: inline-block;
-    font-size: 13px; }
+    display: inline-block; }
     header .contact i {
+      font-size: 15px; }
+    header .contact li {
+      font-size: 13px;
       margin-left: 30px; }
+      header .contact li:first-child {
+        margin-left: 0; }
+      header .contact li:last-child {
+        font-size: 14px;
+        font-weight: bold; }
+        header .contact li:last-child i {
+          font-size: 16px; }
+      header .contact li i {
+        margin-right: 7px; }
+    header .contact ul {
+      margin-left: 32px; }
   header nav {
     font-size: 12px;
     font-weight: bold;
@@ -126,12 +138,14 @@ footer {
   text-align: left;
   position: absolute;
   bottom: 24px;
-  left: 85px;
+  left: 0;
   font-size: 13px;
-  opacity: 0.5;
+  overflow-y: hidden;
+  display: block;
   width: 100%; }
   footer p {
+    opacity: 0.5;
     display: inline-block;
-    margin: 0; }
+    margin-left: 85px; }
   footer img {
     margin-left: 25px; }

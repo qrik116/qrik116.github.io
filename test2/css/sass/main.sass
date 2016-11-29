@@ -4,7 +4,7 @@ body
 	font-family: "Open Sans", sans-serif
 	font-weight: normal
 	font-size: 14px
-	min-width: 320px
+	min-width: 385px
 	line-height: 1.42857
 	-webkit-font-smoothing: antialised
 	overflow-x: hidden
@@ -32,7 +32,7 @@ ul, li
 
 .bgvideo 
 	position: fixed
-	left: 0
+	right: 0
 	bottom: 0
 	min-width: 100%
 	min-height: 100%
@@ -41,8 +41,6 @@ ul, li
 	z-index: -9999
 iframe
 	position: absolute
-	height: 100%
-	width: 100%
 .background
 	z-index: -9000
 	position: fixed
@@ -54,18 +52,33 @@ iframe
 //---------------------Main Header
 header
 	margin: 25px 45px 0
-	a
-		color: #fff
 	img
 		padding-top: 8px
-	i
+	a
+		color: #fff
 		margin-left: 20px
+		font-size: 13px
+		&:first-child
+			margin-left: 0
 	.contact
 		float: right
 		display: inline-block
-		font-size: 13px
 		i
+			font-size: 15px
+		li
+			font-size: 13px
 			margin-left: 30px
+			&:first-child
+				margin-left: 0
+			&:last-child
+				font-size: 14px
+				font-weight: bold
+				i
+					font-size: 16px
+			i
+				margin-right: 7px
+		ul
+			margin-left: 32px
 	nav
 		font-size: 12px
 		font-weight: bold
@@ -112,6 +125,7 @@ header
 					display: inline-block
 					margin: 0
 					color: #fbd764
+					font-size: 2.5em
 					&:before, &:after
 						content: ' '
 						width: 100%
@@ -127,17 +141,21 @@ header
 					opacity: 0.9
 					&:first-child
 						font-size: 20px
+//---------------------------------
 footer
 	text-align: left
 	position: absolute
 	bottom: 24px
-	left: 85px
+	left: 0
 	font-size: 13px
-	opacity: 0.5
+	overflow-y: hidden
+	display: block
 	width: 100%
 	p
+		opacity: 0.5
 		display: inline-block
-		margin: 0
+		margin-left: 85px
 	img
+		//display: block
 		margin-left: 25px
-//---------------------------------
+		
