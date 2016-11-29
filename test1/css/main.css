@@ -138,12 +138,13 @@ footer {
   text-align: left;
   position: absolute;
   bottom: 24px;
-  left: 85px;
+  left: 0;
   font-size: 13px;
   opacity: 0.5;
   width: 100%; }
   footer p {
     display: inline-block;
-    margin: 0; }
+    margin-left: 85px; }
   footer img {
-    margin-left: 25px; }
+    margin-left: 25px;
+    overflow-y: hidden; }
