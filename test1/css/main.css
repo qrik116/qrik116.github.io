@@ -141,10 +141,10 @@ footer {
   left: 0;
   font-size: 13px;
   opacity: 0.5;
-  width: 100%; }
+  width: 100%;
+  overflow-y: hidden; }
   footer p {
     display: inline-block;
     margin-left: 85px; }
   footer img {
-    margin-left: 25px;
-    overflow-y: hidden; }
+    margin-left: 25px; }
