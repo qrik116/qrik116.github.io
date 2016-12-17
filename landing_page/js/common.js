@@ -1,6 +1,4 @@
 $(document).ready(function () {
-	
-	$('.s_porfolio .filter').after('<span>/</span>');
     
     $('#Container').mixItUp();
     
@@ -26,16 +24,6 @@ $(document).ready(function () {
     });
     
     $('.open_descr').magnificPopup({
-        //delegate: 'a',
-        removalDelay: 500, //delay removal by X to allow out-animation
-        callbacks: {
-            beforeOpen: function() {
-               this.st.mainClass = this.st.el.attr('data-effect');
-            }
-        },
-        midClick: true // allow opening popup on middle mouse click. Always set it to true if you don't provide alternative source.
-    });
-	$('.open_preview').magnificPopup({
         //delegate: 'a',
         removalDelay: 500, //delay removal by X to allow out-animation
         callbacks: {
