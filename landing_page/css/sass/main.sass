@@ -21,10 +21,15 @@ body textarea:required:valid
 section, top_header
 	position: relative
 
+.wrap
+	overflow: hidden
+
 .anim_run
+	-webkit-animation-play-state: running !important
 	animation-play-state: running !important
 
 .anim_paus
+	-webkit-animation-play-state: paused
 	animation-play-state: paused
 
 .top_header
@@ -73,6 +78,75 @@ svg
 		width: 120px
 //-------------------------------------
 
+//------------- Button menu
+$height-line: 3px
+$size: 70px
+$line-hights: $size*0.3-$height-line
+$time1: 0.25s
+$time2: 0.2s
+$time3: 0.4s
+$color-line: #000
+.menu-btn
+	height: $size
+	width: $size
+	background: #000
+	border: none
+	position: relative
+	background: rgba(255, 255, 255, 0.15)
+	border-radius: 50%
+	cursor: pointer
+	z-index: 100
+	transition: all .3s ease
+	> span
+		display: block
+		position: absolute
+		top: 0
+		left: 0
+		width: 100%
+		height: 100%
+		display: block
+		cursor: pointer
+		transition: opacity $time2 cubic-bezier(0.645, 0.045, 0.355, 1), transform $time3 cubic-bezier(0.4, 0.01, 0.165, 0.99)
+		.top, .middle, .bottom
+			position: absolute
+			height: 100%
+			width: 100%
+			left: 0
+			&:before
+				position: absolute
+				content: ""
+				top: 50%
+				left: 50%
+				width: 60%
+				display: inline-block
+				background: $color-line
+				height: $height-line
+				transform: translateX(-50%) translateY(-50%)
+				transition: opacity $time1 cubic-bezier(0.645, 0.045, 0.355, 1), transform $time3 cubic-bezier(0.4, 0.01, 0.165, 0.99)
+		.top:before
+			top: ($line-hights + $height-line)
+		.bottom:before
+			top: auto
+			bottom: $line-hights
+	&.open > span
+		transform: rotate(90deg)
+		.top
+			transform: rotate(45deg)
+			transition: transform $time1 $time2 cubic-bezier(0.4, 0.01, 0.165, 0.99)
+			&:before
+				transform: translate(-($line-hights + ($height-line - 1)), ($size/2 - ($line-hights + $height-line) - ($height-line - 1)))
+		.middle
+			transition: transform $time1 $time2 cubic-bezier(0.4, 0.01, 0.165, 0.99)
+			transform: rotate(45deg)
+			&:before
+				opacity: 0
+		.bottom
+			transition: transform $time1 $time2 cubic-bezier(0.4, 0.01, 0.165, 0.99)
+			transform: rotate(-45deg)
+			&:before
+				transform: translate(-($line-hights + ($height-line - 1)), -($size/2 - $line-hights - ($height-line - 1)))
+//
+
 //------------- Main menu
 .main_mnu
 	position: fixed
@@ -81,65 +155,15 @@ svg
 	z-index: 2
 	top: 80px
 	right: 8%
-	.btn
-		position: relative
-		width: 100%
-		height: 100%
-		background: rgba(255,255,255, 0.15)
-		border-radius: 50%
-		-webkit-transition: transform 0.3s
-		transition: transform 0.3s
-		cursor: pointer
-		z-index: 100
-	.line
-		position: absolute
-		height: 6px
-		width: 60%
-		background: #000
-		border-radius: 6px
-		top: 50%
-		left: 50%
-		-webkit-transform: translateX(-50%) translateY(-50%)
-		transform: translateX(-50%) translateY(-50%)
-		-webkit-transition: transform 0.3s, background-color 0.3s
-		transition: transform 0.3s, background-color 0.3s
-		&:before, &:after
-			content: ''
-			position: absolute
-			height: 6px
-			width: 100%
-			background: #000
-			border-radius: 6px
-			-webkit-transition: transform 0.3s, background-color 0.3s
-			transition: transform 0.3s, background-color 0.3s
-		&:before
-			top: -12px
-			-webkit-transform-origin: 13% 100%
-			transform-origin: 13% 100%
-		&:after
-			top: 12px
-			-webkit-transform-origin: 24% 30%
-			transform-origin: 24% 30%
-.trigger
-	.line
-		height: 0px
-		top: 45%
-		&:before
-			-webkit-transform: rotate(45deg)
-			transform: rotate(45deg)
-			width: 120%
-		&:after
-			-webkit-transform: rotate(-45deg)
-			transform: rotate(-45deg)
-			width: 120%
 
-.btn:hover
+.menu-btn.open
+	.top:before, .middle:before, .bottom:before
+		background: rgba(255,255,255, 0.7)
+.menu-btn:hover
 	-webkit-transform: scale(1.2)
 	transform: scale(1.2)
-	.line
+	.top:before, .middle:before, .bottom:before
 		background: rgba(255,255,255, 0.7)
-		&:before, &:after
-			background-color: rgba(255,255,255, 0.7)
 //------------- Menu is hidde
 .top_mnu
 	position: fixed
@@ -379,8 +403,15 @@ section
 		.portfolio_item
 			padding: 0
 			display: none
+			overflow: hidden
+			height: 220px
 			img
 				width: 100%
+				height: 100%
+				-webkit-object-fit: cover
+				-moz-object-fit: cover
+				-o-object-fit: cover
+				object-fit: cover
 			.hover_cont
 				opacity: 0
 				position: absolute

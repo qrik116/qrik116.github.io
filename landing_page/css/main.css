@@ -13,10 +13,15 @@ body {
 section, top_header {
   position: relative; }
 
+.wrap {
+  overflow: hidden; }
+
 .anim_run {
+  -webkit-animation-play-state: running !important;
   animation-play-state: running !important; }
 
 .anim_paus {
+  -webkit-animation-play-state: paused;
   animation-play-state: paused; }
 
 .top_header {
@@ -62,6 +67,66 @@ svg {
     height: 120px;
     width: 120px; }
 
+.menu-btn {
+  height: 70px;
+  width: 70px;
+  background: #000;
+  border: none;
+  position: relative;
+  background: rgba(255, 255, 255, 0.15);
+  border-radius: 50%;
+  cursor: pointer;
+  z-index: 100;
+  transition: all 0.3s ease; }
+  .menu-btn > span {
+    display: block;
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    display: block;
+    cursor: pointer;
+    transition: opacity 0.2s cubic-bezier(0.645, 0.045, 0.355, 1), transform 0.4s cubic-bezier(0.4, 0.01, 0.165, 0.99); }
+    .menu-btn > span .top, .menu-btn > span .middle, .menu-btn > span .bottom {
+      position: absolute;
+      height: 100%;
+      width: 100%;
+      left: 0; }
+      .menu-btn > span .top:before, .menu-btn > span .middle:before, .menu-btn > span .bottom:before {
+        position: absolute;
+        content: "";
+        top: 50%;
+        left: 50%;
+        width: 60%;
+        display: inline-block;
+        background: #000;
+        height: 3px;
+        transform: translateX(-50%) translateY(-50%);
+        transition: opacity 0.25s cubic-bezier(0.645, 0.045, 0.355, 1), transform 0.4s cubic-bezier(0.4, 0.01, 0.165, 0.99); }
+    .menu-btn > span .top:before {
+      top: 21px; }
+    .menu-btn > span .bottom:before {
+      top: auto;
+      bottom: 18px; }
+  .menu-btn.open > span {
+    transform: rotate(90deg); }
+    .menu-btn.open > span .top {
+      transform: rotate(45deg);
+      transition: transform 0.25s 0.2s cubic-bezier(0.4, 0.01, 0.165, 0.99); }
+      .menu-btn.open > span .top:before {
+        transform: translate(-20px, 12px); }
+    .menu-btn.open > span .middle {
+      transition: transform 0.25s 0.2s cubic-bezier(0.4, 0.01, 0.165, 0.99);
+      transform: rotate(45deg); }
+      .menu-btn.open > span .middle:before {
+        opacity: 0; }
+    .menu-btn.open > span .bottom {
+      transition: transform 0.25s 0.2s cubic-bezier(0.4, 0.01, 0.165, 0.99);
+      transform: rotate(-45deg); }
+      .menu-btn.open > span .bottom:before {
+        transform: translate(-20px, -15px); }
+
 .main_mnu {
   position: fixed;
   width: 5em;
@@ -69,65 +134,15 @@ svg {
   z-index: 2;
   top: 80px;
   right: 8%; }
-  .main_mnu .btn {
-    position: relative;
-    width: 100%;
-    height: 100%;
-    background: rgba(255, 255, 255, 0.15);
-    border-radius: 50%;
-    -webkit-transition: transform 0.3s;
-    transition: transform 0.3s;
-    cursor: pointer;
-    z-index: 100; }
-  .main_mnu .line {
-    position: absolute;
-    height: 6px;
-    width: 60%;
-    background: #000;
-    border-radius: 6px;
-    top: 50%;
-    left: 50%;
-    -webkit-transform: translateX(-50%) translateY(-50%);
-    transform: translateX(-50%) translateY(-50%);
-    -webkit-transition: transform 0.3s, background-color 0.3s;
-    transition: transform 0.3s, background-color 0.3s; }
-    .main_mnu .line:before, .main_mnu .line:after {
-      content: "";
-      position: absolute;
-      height: 6px;
-      width: 100%;
-      background: #000;
-      border-radius: 6px;
-      -webkit-transition: transform 0.3s, background-color 0.3s;
-      transition: transform 0.3s, background-color 0.3s; }
-    .main_mnu .line:before {
-      top: -12px;
-      -webkit-transform-origin: 13% 100%;
-      transform-origin: 13% 100%; }
-    .main_mnu .line:after {
-      top: 12px;
-      -webkit-transform-origin: 24% 30%;
-      transform-origin: 24% 30%; }
 
-.trigger .line {
-  height: 0px;
-  top: 45%; }
-  .trigger .line:before {
-    -webkit-transform: rotate(45deg);
-    transform: rotate(45deg);
-    width: 120%; }
-  .trigger .line:after {
-    -webkit-transform: rotate(-45deg);
-    transform: rotate(-45deg);
-    width: 120%; }
+.menu-btn.open .top:before, .menu-btn.open .middle:before, .menu-btn.open .bottom:before {
+  background: rgba(255, 255, 255, 0.7); }
 
-.btn:hover {
+.menu-btn:hover {
   -webkit-transform: scale(1.2);
   transform: scale(1.2); }
-  .btn:hover .line {
+  .menu-btn:hover .top:before, .menu-btn:hover .middle:before, .menu-btn:hover .bottom:before {
     background: rgba(255, 255, 255, 0.7); }
-    .btn:hover .line:before, .btn:hover .line:after {
-      background-color: rgba(255, 255, 255, 0.7); }
 
 .top_mnu {
   position: fixed;
@@ -352,9 +367,16 @@ section {
   padding-top: 50px; }
   .s_portfolio .portfolio_grid .portfolio_item {
     padding: 0;
-    display: none; }
+    display: none;
+    overflow: hidden;
+    height: 220px; }
     .s_portfolio .portfolio_grid .portfolio_item img {
-      width: 100%; }
+      width: 100%;
+      height: 100%;
+      -webkit-object-fit: cover;
+      -moz-object-fit: cover;
+      -o-object-fit: cover;
+      object-fit: cover; }
     .s_portfolio .portfolio_grid .portfolio_item .hover_cont {
       opacity: 0;
       position: absolute;
