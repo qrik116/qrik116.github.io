@@ -1,0 +1,67 @@
+/*==========  Desktop First Method  ==========*/
+/* Large Devices, Wide Screens */
+@media only screen and (max-width: 1200px) {
+  .main_header .top-header nav ul li {
+    margin-right: 25px;
+  }
+  .main_header .top-header nav ul li:last-child {
+    margin-right: 0;
+  }
+  .tel {
+    font-size: 17px;
+  }
+  .main_header .bottom-header {
+    padding: 14px 0;
+  }
+}
+
+/* Medium Devices, Desktops */
+/* Small Devices, Tablets */
+@media only screen and (max-width: 768px) {
+  .menu-btn {
+    display: inline-block !important;
+  }
+  .menu-btn > span .top:before, .menu-btn > span .middle:before, .menu-btn > span .bottom:before {
+    -webkit-border-radius: 20px;
+            border-radius: 20px;
+  }
+  .logo {
+    position: static;
+  }
+  .sign {
+    display: -webkit-box;
+    display: -webkit-flex;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: end;
+    -webkit-justify-content: flex-end;
+        -ms-flex-pack: end;
+            justify-content: flex-end;
+  }
+  .main_header .bottom-header nav > ul {
+    display: -webkit-box;
+    display: -webkit-flex;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-justify-content: space-around;
+        -ms-flex-pack: distribute;
+            justify-content: space-around;
+  }
+  .main_header .bottom-header nav > ul li {
+    margin-right: 15px;
+  }
+  .main_header .bottom-header nav > ul li:last-child {
+    margin-right: 0;
+  }
+}
+
+/* Extra Small Devices, Phones */
+/* Custom, iPhone Retina */
+/*==========  Mobile First Method  ==========*/
+/* Custom, iPhone Retina */
+/* Extra Small Devices, Phones */
+/* Small Devices, Tablets */
+/* Medium Devices, Desktops */
+/* Large Devices, Wide Screens */
+
+/*# sourceMappingURL=media.css.map */
