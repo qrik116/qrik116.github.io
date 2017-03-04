@@ -5,24 +5,6 @@ $(document).ready(function() {
 		$(this).toggleClass('open');
 	});
 
-	$('.open-modal').magnificPopup({
-		//delegate: 'a',
-		removalDelay: 500, //delay removal by X to allow out-animation
-		callbacks: {
-				beforeOpen: function() {
-					 this.st.mainClass = this.st.el.attr('data-effect');
-				}
-		},
-		midClick: true // allow opening popup on middle mouse click. Always set it to true if you don't provide alternative source.
-	});
-
-	// Ввод только чисел
-	$('.input_num').bind("change keyup input click", function() {
-		if (this.value.match(/[^0-9]/g)) {
-			this.value = this.value.replace(/[^0-9]/g, '');
-		}
-	});
-
 	// Карусель
 	var owl = $("#slide-companies");
 	owl.owlCarousel({
@@ -30,6 +12,14 @@ $(document).ready(function() {
 		paginationSpeed : 400,
 		singleItem: true,
 		pagination: true,
-		//autoPlay: 3000
+		autoPlay: 5000,
+		touchDrag: false,
+		mouseDrag: false
+	});
+
+	$('.main_footer .title').on('click', function(event) {
+		event.preventDefault();
+		$(this).next().toggle(400);
+		$(this).parents('nav').parent().next().find('.title').toggleClass('bd-top');
 	});
 });
