@@ -1,0 +1,87 @@
+body {
+  font-family: "Raleway", "Arial", sans-serif;
+  font-weight: 300;
+  font-size: 22px;
+  min-width: 320px;
+  overflow-x: hidden;
+  background: #fff;
+  color: #333;
+}
+
+ul, li {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+}
+
+a {
+  text-decoration: none;
+  color: #333;
+}
+
+a:focus {
+  outline: none;
+}
+
+a:hover {
+  color: #333;
+  opacity: .6;
+}
+
+.text-center {
+  text-align: center;
+}
+
+.display_none {
+  display: none;
+}
+
+body {
+  padding: 15px 0;
+}
+
+.main-wrap {
+  width: 1010px;
+  margin: 0 auto;
+  padding: 7.5px;
+  border: 1px dashed red;
+}
+
+.element-row {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-flex-flow: wrap row;
+      -ms-flex-flow: wrap row;
+          flex-flow: wrap row;
+  -webkit-box-pack: center;
+  -webkit-justify-content: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+.element-wrap {
+  padding: 7.5px;
+}
+
+.element {
+  border: 1px solid blue;
+  width: 215px;
+  height: 150px;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+  -webkit-align-items: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+  -webkit-justify-content: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  text-align: center;
+}
+
+/*# sourceMappingURL=main.css.map */
